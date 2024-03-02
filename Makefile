@@ -4,6 +4,7 @@ install:
 	#insatall commands
 format:
 	#format code
+	black *.py mylib/*.py
 lint:
 	#flake8 or pylint
 test:
