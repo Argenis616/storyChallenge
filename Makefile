@@ -1,6 +1,7 @@
 install:
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt
+		pip install -r requirements.txt &&\
+			python -m textblob.download_corpora
 	#insatall commands
 format:
 	#format code
@@ -10,6 +11,6 @@ lint:
 	pylint --disable=R,C *.py mylib/*.py
 test:
 	#test
-	python -m pytest -vv --cov=mylib test_logic.py
+	python -m pytest -vv --cov=mylib --cov=main test_*.py
 deploy:
 	#deploy
