@@ -1,7 +1,8 @@
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt &&\
-			python -m textblob.download_corpora
+			python -m textblob.download_corpora &&\
+				pip install httpx
 	#insatall commands
 format:
 	#format code
